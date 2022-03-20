@@ -1,0 +1,10 @@
+#Criar uma Função na Linguagem M para converter binário em uma tabela de um arquivo CSV
+
+let
+    Fonte = (Parâmetro1) => let
+        Fonte = Csv.Document(Parâmetro1,[Delimiter=";", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+        #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true])
+    in
+        #"Cabeçalhos Promovidos"
+in
+    Fonte
