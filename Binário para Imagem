@@ -1,4 +1,3 @@
-#Criar uma Função na Linguagem M para converter binário em uma imagem
 
 let
     Conversor = (Fonte as binary) as text =>
