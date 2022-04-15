@@ -1,4 +1,4 @@
---Script para criação da dCalendario através da linguagem M no Power BI
+
 
 let
     DataMin = List.Min(fVendas[Data]),
