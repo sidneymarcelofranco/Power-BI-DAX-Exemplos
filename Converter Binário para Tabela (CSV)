@@ -1,4 +1,4 @@
-#Criar uma Função na Linguagem M para converter binário em uma tabela de um arquivo CSV
+
 
 let
     Fonte = (Parâmetro1) => let
