@@ -1,10 +1,11 @@
---Criar Tabela Auxiliar com a coluna outros
+--Criar Tabela Auxiliar com a coluna outros 
+--ProductNames Filtra dProdutos 1 para Muitos
 ProductNames = 
 UNION (
     ALLNOBLANKROW(dProduto[PRODUTO]),
     { "Others"}
 )
-
+------------------------------------------------------------------------
 --Ranking Considerando a linha outros
 Ranking = 
 VAR ProductsToRank = 3
@@ -23,7 +24,7 @@ VAR Result =
     )
 Return
     Result
-    
+------------------------------------------------------------------------------------------------    
 -- Medida com Top 3 e agrupamento de outros    
 Vendas Top 3 e Outros = 
 VAR SalesOfAll =
@@ -75,9 +76,8 @@ RETURN
                 RETURN
                     SalesOthers
             )
-    )
-    
-   
+    )   
+--------------------------------------------------------------------------------------   
 --Linhas Visiveis para conferência ou filtro   
 Visible Row = 
 VAR Ranking = [Ranking]
